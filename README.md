@@ -31,8 +31,6 @@ A simple, single-page React application for searching countries using the REST C
    yarn install
    ```
 
-   note: if errors in the terminal were encountered, specifically about running scripts, try using command prompt instead.
-
 3. Create a `.env` file in the root directory and place this value:
    ```env
    VITE_API_BASE_URL=https://restcountries.com/v3.1/
@@ -45,7 +43,8 @@ npm run dev
 # or
 yarn dev
 ```
-
+note: if errors in the terminal were encountered, specifically about running scripts, try using command prompt instead.
+ 
 The app will be available at [http://localhost:5173](http://localhost:5173).
 
 ```
