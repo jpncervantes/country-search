@@ -62,8 +62,8 @@ const CountryDetails = ({ country, scrollContainerRef }) => {
               <CardTitle className="text-[13px] font-semibold">Driving Information:</CardTitle>
             </CardHeader>
             <CardContent className="m-5 mt-0">
-              <span className="text-[32px] font-extrabold">
-                In {name?.common}, they drive on the <span className="italic">{car?.side}</span> side of the road
+              <span className="text-[32px] font-bold">
+                In {name?.common}, they drive on the <span className="italic font-extrabold">{car?.side}</span> side of the road
               </span>
             </CardContent>
           </Card>

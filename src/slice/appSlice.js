@@ -2,8 +2,6 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   searchKey: '',
-  isLoading: false,
-  list: [],
   selectedCountry: undefined
 }
 

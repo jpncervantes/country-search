@@ -63,7 +63,7 @@ const SearchResult = ({ countryList }) => {
         return (
           <Card
             key={i}
-            className="w-full md:w-60 flex flex-col relative cursor-pointer transition-transform duration-200 hover:-translate-y-2"
+            className="w-full md:w-60 flex flex-col relative cursor-pointer transition-all duration-200 hover:-translate-y-2"
             onClick={() => handleSelectCountry(country)}
           >
             <CardHeader>

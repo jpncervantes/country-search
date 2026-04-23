@@ -1,10 +1,8 @@
 import { debounce } from '@/lib/helpers'
 import { Input } from '../ui/input'
-
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { setCountryList, setSearchKey } from '@/slice/appSlice'
-import { countryApi } from '@/slice/apiSlice'
+import { setSearchKey } from '@/slice/appSlice'
 import Instructions from '../user-instructions/Instructions'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
@@ -13,14 +11,10 @@ const SearchBar = () => {
 
   const dispatch = useDispatch()
 
-  const handleSearch = useCallback(
-    debounce((e) => {
-      const value = e.target.value
-      dispatch(setSearchKey(value))
-      // dispatch(countryApi.util.invalidateTags([{ type: 'CountrySearch', id: value }]))
-    }, 300),
-    [dispatch]
-  )
+  const handleSearch = debounce((e) => {
+    const value = e.target.value
+    dispatch(setSearchKey(value))
+  }, 300)
   return (
     <div className="w-full flex flex-col gap-5 items-center relative">
       <Input

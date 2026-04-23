@@ -1,9 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { setCountryList } from './appSlice'
 
 export const countryApi = createApi({
   reducerPath: 'countryApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://restcountries.com/v3.1/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_BASE_URL }),
   endpoints: (builder) => ({
     searchCountriesByName: builder.query({
       query: ({ name, fields }) => {
