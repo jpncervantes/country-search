@@ -9,13 +9,15 @@ export const countryApi = createApi({
       query: ({ name, fields }) => {
         const searchParams = new URLSearchParams({ fields }).toString()
         return `name/${encodeURIComponent(name)}${searchParams ? `?${searchParams}` : ''}`
-      }
+      },
+      providesTags: (result, error, arg) => [{ type: 'CountrySearch', id: arg?.name }]
     }),
     getAllCountries: builder.query({
       query: (params = {}) => {
         const searchParams = new URLSearchParams(params).toString()
         return `all${searchParams ? `?${searchParams}` : ''}`
-      }
+      },
+      providesTags: ['AllCountries']
     })
   })
 })

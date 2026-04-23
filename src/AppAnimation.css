@@ -1,0 +1,32 @@
+.bounce2 {
+    animation: bounce2 30s ease-in-out infinite;
+}
+
+.bounce2:hover {
+    animation: bounce2 10s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounce2 {
+
+    0%,
+    2%,
+    4%,
+    6%,
+    8% {
+        transform: translateY(0);
+    }
+
+    3% {
+        transform: translateY(-10px);
+    }
+
+    5% {
+        transform: translateY(-5px);
+    }
+
+    9%,
+    100% {
+        transform: translateY(0);
+    }
+}
