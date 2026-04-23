@@ -61,7 +61,11 @@ const SearchResult = ({ countryList }) => {
         let nameMatches = getMatchingNameFields(country?.name, searchKey)
         nameMatches = nameMatches.filter((match) => match.label.startsWith('Native'))
         return (
-          <Card key={i} className="w-60 flex flex-col relative cursor-pointer" onClick={() => handleSelectCountry(country)}>
+          <Card
+            key={i}
+            className="w-full md:w-60 flex flex-col relative cursor-pointer transition-transform duration-200 hover:-translate-y-2"
+            onClick={() => handleSelectCountry(country)}
+          >
             <CardHeader>
               <CardTitle className="w-[80%]">{highlightMatch(country?.name.common, searchKey)}</CardTitle>
               <CardDescription>{highlightMatch(country?.name.official, searchKey)}</CardDescription>

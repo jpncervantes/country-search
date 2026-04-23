@@ -36,14 +36,14 @@ const Homepage = () => {
   const scrollContainerRef = useRef(null)
 
   return (
-    <div className="justify-center flex items-center flex-col p-12 gap-12 h-screen">
-      <div className="w-[40%] flex-col items-center flex gap-5">
+    <div className="justify-center flex items-center flex-col p-5 gap-5 md:p-12 h-screen transition-transform duration-200">
+      <div className="w-full md:w-[40%] flex-col items-center flex gap-5">
         <Brand />
         <SearchBar />
       </div>
       <div
         ref={scrollContainerRef}
-        className="w-[90%] flex flex-col  items-center h-full overflow-auto px-1 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-gray-100"
+        className="w-full md:w-[90%] flex flex-col  items-center h-full overflow-auto px-1 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-gray-100"
       >
         {selectedCountry ? (
           <CountryDetails country={selectedCountry} scrollContainerRef={scrollContainerRef} />

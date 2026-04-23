@@ -23,18 +23,18 @@ const CountryDetails = ({ country, scrollContainerRef }) => {
   const currencyCode = Object.keys(country.currencies)[0]
   const currency = country?.currencies[currencyCode]
   return (
-    <div className="w-[70%]">
+    <div className="w-full md:w-[70%]">
       <div className="flex items-center gap-1 cursor-pointer" onClick={handleBack}>
         <FaArrowLeft />
         <span>Go Back</span>
       </div>
       <div className="w-full flex justify-center flex-col items-center p-10">
         <span className="text-[13px] font-semibold">Official Name:</span>
-        <span className="text-[48px] font-extrabold">{name?.official}</span>
+        <span className="text-[48px] font-extrabold text-center">{name?.official}</span>
         <span className="text-[30px] font-semibold">{name?.common}</span>
       </div>
-      <div className="flex items-start justify-start gap-10">
-        <div className="flex flex-col w-[50%] gap-10">
+      <div className="flex md:flex-row flex-col items-start justify-start gap-10">
+        <div className="flex flex-col md:w-[50%] gap-10">
           <Card className=" flex justify-center flex-col w-full">
             <CardHeader className="m-5 mb-2">
               <CardTitle className="text-[13px] font-semibold">Currency:</CardTitle>
@@ -69,7 +69,7 @@ const CountryDetails = ({ country, scrollContainerRef }) => {
           </Card>
         </div>
 
-        <Card className="w-[50%] flex justify-center items-center p-10 gap-3">
+        <Card className="md:w-[50%] w-full flex justify-center items-center p-10 gap-3">
           <CardHeader className="m-5 mb-2 w-full">
             <CardTitle className="text-[13px] font-semibold">National Symbols:</CardTitle>
           </CardHeader>

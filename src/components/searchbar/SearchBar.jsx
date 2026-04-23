@@ -9,6 +9,8 @@ import Instructions from '../user-instructions/Instructions'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
 const SearchBar = () => {
+  const [showTutorial, setShowTutorial] = useState(true)
+
   const dispatch = useDispatch()
 
   const handleSearch = useCallback(
@@ -27,7 +29,18 @@ const SearchBar = () => {
         onChange={handleSearch}
       />
       <FaMagnifyingGlass className="absolute right-5 top-3" size={20} />
-      <Instructions />
+      {showTutorial ? (
+        <Instructions toggleTutorial={(value) => setShowTutorial(value)} />
+      ) : (
+        <span
+          className="text-[12px] underline cursor-pointer"
+          onClick={() => {
+            setShowTutorial(true)
+          }}
+        >
+          Show Tutorial
+        </span>
+      )}
     </div>
   )
 }
