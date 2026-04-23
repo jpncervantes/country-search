@@ -13,7 +13,7 @@ A simple, single-page React application for searching countries using the REST C
 
 ### Prerequisites
 
-- Node.js (v16 or higher recommended)
+- Node.js (Vite requires Node.js version 20.19+ or 22.12+)
 - npm or yarn
 
 ### Installation
@@ -24,11 +24,15 @@ A simple, single-page React application for searching countries using the REST C
    cd country-search
    ```
 2. Install dependencies:
+
    ```sh
    npm install
    # or
    yarn install
    ```
+
+   note: if errors in the terminal were encountered, specifically about running scripts, try using command prompt instead.
+
 3. Create a `.env` file in the root directory and place this value:
    ```env
    VITE_API_BASE_URL=https://restcountries.com/v3.1/

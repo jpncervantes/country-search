@@ -1,8 +1,8 @@
-import { FaUserXmark, FaX } from 'react-icons/fa6'
+import { FaUserXmark, FaX } from "react-icons/fa6";
 
 const NumberBullet = ({ number }) => {
-  return <div className="bg-gray-600 text-white text-[12px] rounded-full h-5 w-5 flex items-center justify-center">{number}</div>
-}
+  return <div className="bg-gray-600 text-white text-[12px] rounded-full h-5 w-5 flex items-center justify-center">{number}</div>;
+};
 
 const Instructions = ({ toggleTutorial }) => {
   return (
@@ -15,12 +15,12 @@ const Instructions = ({ toggleTutorial }) => {
         </div>
         <div className="gap-3 flex justify-center">
           <NumberBullet number={2} />
-          <span className="font-bold text-[12px] items-center flex">View country info by clicking a card</span>
+          <span className="font-bold text-[12px] items-center flex">Click a country card to view details</span>
         </div>
       </div>
       <FaX className="absolute top-3 right-3 cursor-pointer" size={15} onClick={() => toggleTutorial(false)} />
     </div>
-  )
-}
+  );
+};
 
-export default Instructions
+export default Instructions;
